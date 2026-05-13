@@ -1,0 +1,10 @@
+CBE is derived from QBE, the Quick Backend compiler.
+
+Original upstream:
+  https://c9x.me/compile/
+  git://c9x.me/qbe.git
+
+QBE is distributed under the MIT license. See LICENSE.
+
+CBE changes the project goals: it is a semantic/provenance/proof-artifact
+compiler IR laboratory, not a minimal production compiler backend.
