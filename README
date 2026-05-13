@@ -1,18 +1,32 @@
-QBE - Backend Compiler              http://c9x.me/compile/
+# CBE: Categorical Backend Experiment
 
-doc/    Documentation.
-minic/  An example C frontend for QBE.
-tools/  Miscellaneous tools (testing).
-test/   Tests.
-amd64/
-arm64/
-rv64/   Architecture-specific code.
+CBE is a QBE-derived compiler IR laboratory for categorical program
+representation, semantic provenance, proof-obligation generation, and artifact
+invalidation.
 
-The LICENSE file applies to all files distributed.
+It is not trying to preserve QBE's original minimal-backend goals.
 
-- Compilation and Installation
+## Origin
 
-Invoke make in this directory to create the executable
-file qbe.  Install using 'make install', the standard
-DESTDIR and PREFIX environment variables are supported.
-Alternatively, you may simply copy the qbe binary.
+CBE is derived from QBE, the Quick Backend compiler:
+
+- https://c9x.me/compile/
+- git://c9x.me/qbe.git
+
+QBE is distributed under the MIT license. See `LICENSE`.
+
+The original upstream README has been preserved as `README.qbe-upstream`.
+
+## Initial goals
+
+- Ingest QBE IL.
+- Normalize phi-node SSA into block-argument SSA.
+- Export an olog-shaped categorical database instance.
+- Generate structural proof obligations.
+- Track dependency provenance and invalidation after edits.
+
+## Build
+
+Run:
+
+    make
